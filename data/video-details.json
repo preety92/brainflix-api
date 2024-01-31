@@ -313,5 +313,22 @@
   },
   {
     "id": "76665d0d-532c-4552-830c-01ab761549d3"
+  },
+  {
+    "id": "0bb4eb33-565d-4856-873d-9685ec401fb0",
+    "image": "../public/Images/image0.jpeg",
+    "views": "0",
+    "likes": "0",
+    "comments": []
+  },
+  {
+    "id": "9635290f-89ff-4c25-8e91-b34e3d0d79e8",
+    "title": "testing",
+    "description": "getting details",
+    "channel": "box",
+    "image": "../public/Images/image0.jpeg",
+    "views": "0",
+    "likes": "0",
+    "comments": []
   }
 ]
