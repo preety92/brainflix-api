@@ -330,5 +330,21 @@
     "views": "0",
     "likes": "0",
     "comments": []
+  },
+  {
+    "id": "db3134b4-586f-4d0c-ae3a-458efa563e1e",
+    "image": "../public/Images/image0.jpeg",
+    "views": "0",
+    "likes": "0",
+    "comments": []
+  },
+  {
+    "id": "e8f251f3-6b70-45c1-a58d-c76db0e6e6d6",
+    "title": "Smooth Jazz and Sweet Bossa Nova Music for Work, Study & Relax",
+    "description": "Smooth jazz music along with the sweet melodies of Bossa Nova create a classy music space for you to enjoy during work, study and relaxation time.\n\nWhile you're busy with work or studies, this playlist will become your trusted companion. Smooth jazz music will help you concentrate and improve your work performance. Bossa Nova melodies will bring peace and comfort, help you reduce stress and create the best conditions to do work in an interesting and creative way.",
+    "image": "../public/Images/image0.jpeg",
+    "views": "0",
+    "likes": "0",
+    "comments": []
   }
 ]

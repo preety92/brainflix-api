@@ -58,8 +58,8 @@ router.post('/', (req, res) => {
 
     res.status(201).json(newVideo);
   } catch (error) {
-    console.error('Error while processing POST request:', error);
-    res.status(500).json({ error: 'Internal server error' });
+    console.error('Error :', error);
+    res.status(500).json({ error: 'server error' });
   }
 });
 
