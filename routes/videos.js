@@ -1,12 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const cors = require('cors');
 const { v4: uuid4 } = require('uuid');
-
 const VIDEO_DATA_FILE = './data/video-details.json';
 const STATIC_ASSETS_DIR = '../public/Images';
-
-
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.static(STATIC_ASSETS_DIR));
 router.use(express.static(STATIC_ASSETS_DIR));
 
 const readVideoData = () => {
@@ -18,15 +20,11 @@ const readVideoData = () => {
     return [];
   }
 };
-
-
-router.get('/', (req, res) => {
-    // const videos = readVideoData();
-  const videos = readVideoData().map(({ id, title, channel, image }) => ({ id, title, channel, image }));
-  res.json(videos);
+router.get('/', (req, res) => {  
+    const videos = readVideoData().map(({ id, title, channel, image }) => ({ id, title, channel, image }));
+    res.json(videos);
+  
 });
-
-
 router.get('/:id', (req, res) => {
   const videos = readVideoData();
   const video = videos.find(video => video.id === req.params.id);
@@ -38,17 +36,16 @@ router.get('/:id', (req, res) => {
 });
 router.post('/', (req, res) => {
   try {
-    const { title, description, channel, duration, timestamp } = req.body;
+    const { title, description, image } = req.body;
     const newVideo = {
       id: uuid4(),
       title,
       description,
-      channel,
-      duration,
-      timestamp,
-      image: '../public/Images/image0.jpeg', 
-      views: '0',
-      likes: '0',
+      duration:0,
+      timestamp:0,
+      image: '/Images/image0.jpeg', 
+      views: 0,
+      likes:0,
       comments: [],
     };
 
